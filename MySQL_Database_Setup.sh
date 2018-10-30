@@ -46,3 +46,72 @@ insert into jdbc_source(TEST_TIMESTAMP) values ( now());
 
 insert into jdbc_source(TEST_TIMESTAMP) values ( now());
 
+create database exec_reports;
+
+use exec_reports;
+
+
+
+CREATE TABLE exec_reports.exec_summary (
+
+   ID INT AUTO_INCREMENT NOT NULL,
+
+   REPORT_DATE DATETIME NOT NULL,
+
+   SALES DOUBLE NOT NULL DEFAULT '0',
+
+   WEB_HITS INT NOT NULL DEFAULT '0',
+
+   TWEETS INT NOT NULL DEFAULT '0',
+
+   TWEETS_POSITIVE INT NOT NULL DEFAULT '0',
+
+  PRIMARY KEY (ID),
+
+  CONSTRAINT UC_datehour UNIQUE (REPORT_DATE)
+
+) ENGINE = InnoDB ROW_FORMAT = DEFAULT;
+
+
+
+INSERT INTO exec_reports.exec_summary
+
+(REPORT_DATE) VALUES (date_format(now(), '%Y-%m-%d %H:00:00'));
+
+
+
+create database us_sales;
+
+use us_sales;
+
+
+
+CREATE TABLE `garment_sales` (
+
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+
+  `GARMENT_NAME` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL,
+
+  SALES_DATE DATETIME NOT NULL,
+
+  `ORDER_VALUE` double DEFAULT '0',
+
+  PRIMARY KEY (`ID`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+
+INSERT INTO us_sales.garment_sales
+
+(GARMENT_NAME, SALES_DATE, ORDER_VALUE) 
+
+VALUES ('Mens Pants', now(), 45.99);
+
+
+
+INSERT INTO us_sales.garment_sales
+
+(GARMENT_NAME, SALES_DATE, ORDER_VALUE) 
+
+VALUES ('Womens Tops',now(), 29.99);

@@ -1,0 +1,6 @@
+{ "timestamp": 1496767720000, "hitType": "event", "eventCategory": "firstPage", "eventAction": "enter", "eventLabel": "Fall Campaign"}
+{ "timestamp": 1496767730000, "hitType": "event", "eventCategory": "browseProduct", "eventAction": "List", "eventLabel": "Mens wear"}
+{ "timestamp": 1496767730000, "hitType": "event", "eventCategory": "firstPage", "eventAction": "enter", "eventLabel": "Fall Campaign"}
+{ "timestamp": 1496767740000, "hitType": "event", "eventCategory": "browseProduct", "eventAction": "List", "eventLabel": "Kids wear"}
+{ "timestamp": 1496767750000, "hitType": "event", "eventCategory": "ViewReviews", "eventAction": "popup", "eventLabel": "Kids wear"}
+{ "timestamp": 1496767740000, "hitType": "event", "eventCategory": "firstPage", "eventAction": "popup", "eventLabel": "Kids wear"}
